@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<div>
+    <h1>All comments</h1>
+    <ul>
+        <% for (let comment of comments) { %>
+            <li>
+                <%= comment.comment %> - <%= comment.username %>
+                <a href="/comments/<%= comment.id %>">details</a>
+            </li>
+        <% } %>
+    </ul>
+    <a href="/comments/new">Create new comment</a>
+</div>
+</body>
+</html>
